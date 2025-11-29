@@ -72,32 +72,34 @@ export PATH=~/ST/spaceranger-2.0.1:$PATH</code></pre>
 									<p>好，重头戏要来了（狂喜）。<br>运行参数具体介绍可以参考：<a href="https://www.10xgenomics.com/support/software/space-ranger/analysis/running-pipelines/command-line-arguments">Space Ranger Command Line Arguments</a>。我这里只写一些必要的东西。如以下示例：</p>
 									<pre><code>spaceranger count --id=APP-2m \
 --fastqs=~/ST/fastqpath \
---transcriptome=~/ST/refdata-gex-mm10-2020-A \
---image=~/ST/APP-2m.tif \
+--transcriptome=~/ST/refdata-gex-mm10-2020-A \ 
+--image=~/ST/APP-2m.tif \ 
 --slide=V19J01-123 \
---area=B1</code></pre>
+--area=B1
+--create-bam=false</code></pre>
 									<p>接下来分别介绍这些参数的功能：</p>
 									<ul>
 										<li><code>--id</code>: 指这次运行的代号，你自己指定一个就行，最好不要与过去和未来的重复。</li>
 										<li><code>--fastqs</code>: 指输入的FASTQ文件所在的<b>目录</b>，注意不是文件名。</li>
-										<li><code>--transcriptome</code>: 指参考转录组的位置，就是刚刚下载的那个老鼠的基因组参考数据库，这个是到文件本身的路径。</li>
+										<li><code>--transcriptome</code>: 指参考转录组的位置，就是刚刚下载的那个老鼠的基因组参考数据库，这个是到文件夹的路径，注意最好是绝对路径，之前踩过坑跑不出来。</li>
 										<li><code>--image</code>: 这个参数写图片的位置。因为是空转，测序之前肯定会做一个HE染色的图或者免疫染色的图后续映射用，是一张很大的脑片图，一般是一个tiff文件。注意也是到文件本身</li>
 										<li><code>--slide</code>: 装片编号。所有可以用于空转测序的载玻片，都必须使用10x官方售卖的耗材，更鸡贼的是他们每个装片都是由单独编号的，这里就写你那个装片耗材上的编号。公司会告诉你编号，如果没告诉你那就肯定是在文件名字上体现的，这个装片编号格式一般为<code>V**?**-***</code>，其中?为字母，*为数字。</li>
 										<li><code>--area</code>装片区域。跟上一条是相对应的，每个官方指定耗材上都有四个区域可以放脑片，所以空转送样一般会让你送四的倍数个。四个区域分别是A1，B1，C1，D1。</li>
+										<li><code>--create-bam</code>是否创建bam文件，这个参数是必须的，挺奇怪吧。</li>
 									</ul>
 									<p>其它参数的介绍可以参看上面的网址。输入这些参数后，正常就可以开始跑了，跑的其实还挺快的，跑一个数据按照我的配置30-40分钟就能跑完。跑完得到的结果就可以直接下载下来或者留在服务器上继续分析了。</p>
 									<ul class="pagination">
 										<li><a href="../bioinformatics.html" class="button primary default">目    录</a></li>
 										<li><span class="button small disabled">Prev</span></li>
 										<li><a href="#" class="page active">1</a></li>
+										<li><a href="seurat.html" class="page">2</a></li>
+										<li><a href="ggplot2.html" class="page">3</a></li>
 										<!--
-										<li><a href="#" class="page">2</a></li>
-										<li><a href="#" class="page">3</a></li>
 										<li><span>&hellip;</span></li>
 										<li><a href="#" class="page">8</a></li>
 										<li><a href="#" class="page">9</a></li>
 										<li><a href="#" class="page">10</a></li>-->
-										<li><a href="#" class="button small disabled">Next</a></li>
+										<li><a href="seurat.html" class="button small">Next</a></li>
 									</ul>
 								</div>
 							</section>
