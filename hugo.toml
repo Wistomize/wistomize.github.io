@@ -1,6 +1,7 @@
 baseURL = 'https://wistomize.github.io/'
 languageCode = 'zh-CN'
 defaultContentLanguage = 'zh'
+hasCJKLanguage = true
 title = 'Blog of Wistomize'
 theme = 'PaperMod'
 [pagination]
