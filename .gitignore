@@ -1,0 +1,24 @@
+# Hugo
+public/
+resources/_gen/
+.hugo_build.lock
+
+# macOS
+.DS_Store
+**/.DS_Store
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+Thumbs.db
+ehthumbs.db
+
+# Node (if ever needed)
+node_modules/
+
+# Cursor
+.cursor/

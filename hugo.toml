@@ -1,0 +1,96 @@
+baseURL = 'https://wistomize.github.io/'
+languageCode = 'zh-CN'
+defaultContentLanguage = 'zh'
+title = 'Blog of Wistomize'
+theme = 'PaperMod'
+[pagination]
+  pagerSize = 10
+enableRobotsTXT = true
+
+[params]
+  env = "production"
+  author = "Wistomize"
+  description = "Traveler, here you could know a lot about a soul."
+  defaultTheme = "dark"
+  ShowReadingTime = true
+  ShowShareButtons = false
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowWordCount = true
+  ShowRssButtonInSectionTermList = true
+  displayFullLangName = false
+  DateFormat = "2006-01-02"
+
+  [params.homeInfoParams]
+    Title = "Hi, my name is Wistomize"
+    Content = "Traveler, here you could know a lot about a soul."
+
+  [[params.socialIcons]]
+    name = "email"
+    url = "mailto:wistomize@gmail.com"
+
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/wistomize"
+
+  [params.cover]
+    hidden = false
+    hiddenInList = false
+    hiddenInSingle = false
+
+  [params.editPost]
+    disabled = true
+
+  [params.fuseOpts]
+    isCaseSensitive = false
+    shouldSort = true
+    location = 0
+    distance = 1000
+    threshold = 0.4
+    minMatchCharLength = 0
+    keys = ["title", "permalink", "summary", "content"]
+
+[markup]
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = true
+    lineNos = false
+    style = "monokai"
+
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[[menus.main]]
+  name = "Essays"
+  url = "/essays/"
+  weight = 1
+
+[[menus.main]]
+  name = "Notes"
+  url = "/notes/"
+  weight = 2
+
+[[menus.main]]
+  name = "Joys"
+  url = "/joys/"
+  weight = 3
+
+[[menus.main]]
+  name = "Monologues"
+  url = "/monologues/"
+  weight = 4
+
+[[menus.main]]
+  name = "Search"
+  url = "/search/"
+  weight = 5
+
+[[menus.main]]
+  name = "Tags"
+  url = "/tags/"
+  weight = 6
