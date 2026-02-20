@@ -20,6 +20,8 @@ enableRobotsTXT = true
   ShowCodeCopyButtons = true
   ShowWordCount = true
   ShowRssButtonInSectionTermList = true
+  ShowToc = true
+  TocOpen = true
   displayFullLangName = false
   DateFormat = "2006-01-02"
 
